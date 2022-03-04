@@ -1,0 +1,271 @@
+/*------------------------------------------------------------
+Page Top
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+.p-top {
+    $root: &;
+
+    &1 {
+        position: relative;
+        margin: -119px 0 0;
+        padding: 119px 0 60px;
+        @include sp {
+            margin: -50px 0 0;
+            padding: 60px 0 20px;
+        }
+
+        &::after {
+            content: "";
+            max-width: 1180px;
+            width: calc(100% - 30px);
+            height: 100%;
+            background: $color3;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+            @include sp {
+                max-width: 100%;
+                width: calc(100% - 20px);
+            }
+        }
+
+        .c-title1 {
+            margin: 0 0 78px;
+            @include sp {
+                margin: 0 0 41px;
+            }
+        }
+
+        &__box {
+            position: relative;
+
+            + #{$root}1__box {
+                margin: 87px 0 0;
+                @include sp {
+                    margin: 54px 0 0;
+                }
+            }
+
+            .c-imgtext2 {
+                margin: 37px 0 0;
+                @include sp {
+                    margin: 32px 0 0;
+                }
+            }
+
+            .c-list2 {
+                margin: 37px 0 0;
+                @include sp {
+                    margin: 41px 0 0;
+                }
+            }
+        }
+    }
+
+    &2 {
+        padding: 118px 0 100px;
+        @include sp {
+            padding: 60px 0;
+        }
+
+        &__wrap {
+            padding: 105px 0 52px;
+            margin: 64px 0 0;
+            position: relative;
+            @include sp {
+                margin: 45px 0 0;
+                padding: 42px 15px 34px;
+            }
+
+            &::after {
+                content: "";
+                max-width: calc(100% - 80px);
+                width: calc(100% - ((100% - 980px) / 2) - 150px);
+                height: 100%;
+                border: 30px solid #eff2f4;
+                border-right: 0;
+                box-sizing: border-box;
+                position: absolute;
+                top: 0;
+                right: 0;
+                @include sp {
+                    max-width: 100%;
+                    width: calc(100% - 20px);
+                    border: 10px solid rgba($color: $color12, $alpha: 0.4);
+                    left: 10px;
+                    right: auto;
+                }
+            }
+        }
+
+        .c-text2 {
+            top: 0;
+        }
+
+        .c-title1 {
+            figure {
+                @include sp {
+                    width: 220px;
+                }
+            }
+        }
+
+        .c-title4 {
+            margin: 0 0 77px;
+            @include sp {
+                margin: 0 0 41px;
+            }
+        }
+    }
+
+    &3 {
+        padding: 56px 0 60px;
+        position: relative;
+        @include sp {
+            padding: 30px 0;
+        }
+
+        &::after {
+            content: "";
+            max-width: 1180px;
+            width: calc(100% - 30px);
+            height: 100%;
+            background: $color12;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+            @include sp {
+                max-width: 100%;
+                width: calc(100% - 20px);
+            }
+        }
+
+        .c-list3 {
+            margin: 20px 0 0;
+            @include sp {
+                margin: 15px -2.5px 0;
+            }
+        }
+    }
+
+    &4 {
+        padding: 118px 0 0;
+        @include sp {
+            padding: 61px 0 0;
+        }
+
+        &__wrap {
+            position: relative;
+            padding: 55px 30px 60px;
+            margin: 84px 0 0;
+            @include sp {
+                margin: 46px 0 0;
+                padding: 41px 15px 35px;
+            }
+
+            &::after {
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: rgba($color: $color4, $alpha: 0.07);
+                border: 10px solid $color3;
+                box-sizing: border-box;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                @include sp {
+                    width: calc(100% + 40px);
+                    left: -20px;
+                }
+            }
+        }
+
+        .c-text2 {
+            top: 52px;
+            @include sp {
+                top: 43px;
+            }
+        }
+
+        .c-title1 {
+            figure {
+                @include sp {
+                    width: 295px;
+                }
+            }
+        }
+        .c-title4 {
+            margin: 0 0 57px;
+            @include sp {
+                margin: 0 0 41px;
+            }
+        }
+    }
+
+    &5 {
+        padding: 76px 0 40px;
+        @include sp {
+            padding: 59px 0 50px;
+        }
+
+        &__txt {
+            font-size: 1.8rem;
+            line-height: 2;
+            color: $color2;
+            margin: 51px 0 0;
+            @include sp {
+                font-size: 1.6rem;
+                margin: 37px 0 0;
+            }
+        }
+
+        .c-text2 {
+            top: -5px;
+            @include sp {
+                top: 1px;
+            }
+        }
+
+        .c-list1 {
+            margin: 35px 0 0;
+            @include sp {
+                margin: 25px 0 0;
+            }
+        }
+    }
+
+    &6 {
+        background: $color3;
+        padding: 119px 0;
+        @include sp {
+            padding: 60px 0;
+        }
+
+        .c-title1 {
+            figure {
+                @include sp {
+                    width: 190px;
+                }
+            }
+        }
+
+        .c-title4 {
+            margin: 79px 0 0;
+            @include sp {
+                margin: 47px 0 0;
+            }
+        }
+
+        .c-table1 {
+            margin: 76px 0 0;
+            @include sp {
+                margin: 41px 0 0;
+            }
+        }
+    }
+}

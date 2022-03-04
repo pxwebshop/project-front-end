@@ -1,0 +1,349 @@
+/*------------------------------------------------------------
+header
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+.c-header {
+    width: 100%;
+    background: $color4;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    box-shadow: 0 3px 10px rgba($color: #000000, $alpha: 0.16);
+    $root: &;
+
+    //------------------------------------------------------
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 0 0 3.1%;
+        @include max-w(1000px) {
+            padding: 0 0 0 2%;
+        }
+        @include sp {
+            padding: 0 0 0 15px;
+        }
+    }
+
+    //------------------------------------------------------
+    &__logo {
+        width: 30.3%;
+        max-width: 375px;
+        @include max-w(1000px) {
+            width: 25%;
+        }
+        @include sp {
+            width: 52%;
+            max-width: 187px;
+            margin: -5px 0 0;
+        }
+
+        a {
+            display: block;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    //------------------------------------------------------
+    &__nav {
+        width: 67%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        @include max-w(1000px) {
+            width: 73.5%;
+        }
+        @include sp {
+            display: none;
+            width: 100%;
+            height: 100%;
+            background: $color1;
+            overflow: auto;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 99;
+            padding: 60px 0;
+        }
+
+        #{$root}__entry {
+            @include sp {
+                width: calc(100% - 60px);
+                position: fixed;
+                top: 0;
+                left: 0;
+            }
+
+            a {
+                @include sp {
+                    font-size: 1.6rem;
+                    line-height: 1.75;
+                    font-family: inherit;
+                    letter-spacing: 0;
+                    padding: 16px 10px 16px;
+                }
+
+                span {
+                    @include sp {
+                        padding: 0 0 0 25px;
+                    }
+
+                    &::before {
+                        @include sp {
+                            width: 20px;
+                            height: 20px;
+                            top: 50%;
+                            left: 0;
+                            transform: translate(0, -50%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //------------------------------------------------------
+    &__menu {
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        @include sp {
+            width: 100%;
+            display: block;
+            padding: 43px 30px 0;
+        }
+    }
+
+    //------------------------------------------------------
+    &__item {
+        &:not(:last-child) {
+            @include sp {
+                margin: 0 0 39px;
+            }
+        }
+    }
+
+    //------------------------------------------------------
+    &__txt {
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        padding: 22px 2.3vw 19px;
+        position: relative;
+        @include max-w(1000px) {
+            padding: 22px 1.7vw 19px;
+        }
+        @include sp {
+            padding: 0;
+        }
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 4px;
+            background: $color1;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            opacity: 0;
+            transition: all 0.3s ease-in-out;
+        }
+
+        @include hover {
+            opacity: 1;
+
+            &::after {
+                opacity: 1;
+            }
+
+            #{$root}__txteng {
+                color: $color2;
+            }
+
+            #{$root}__txtjap {
+                color: $color1;
+            }
+        }
+
+        &eng {
+            display: block;
+            font-size: 1.8rem;
+            line-height: 1.2;
+            color: $color1;
+            font-weight: bold;
+            @include Roboto-Condensed;
+            letter-spacing: 0.85px;
+            transition: all 0.3s ease-in-out;
+            @include sp {
+                display: none;
+            }
+        }
+
+        &jap {
+            display: block;
+            font-size: 1.2rem;
+            line-height: 1.2;
+            color: $color8;
+            margin: 1px 0 0;
+            transition: all 0.3s ease-in-out;
+            @include sp {
+                font-size: 1.6rem;
+                line-height: 1.5;
+                color: $color4;
+                font-weight: bold;
+            }
+        }
+    }
+
+    //------------------------------------------------------
+    &__entry {
+        width: 14.5%;
+        max-width: 120px;
+        @include sp {
+            max-width: 100%;
+            width: 60px;
+        }
+
+        a {
+            width: 100%;
+            height: 100%;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            background: $color5;
+            font-size: 1.4rem;
+            line-height: 1.5;
+            color: $color8;
+            font-weight: bold;
+            @include Roboto-Condensed;
+            letter-spacing: 1px;
+            padding: 16px 10px 12px;
+            letter-spacing: 2.8px;
+            box-sizing: border-box;
+            @include sp {
+                font-size: 1rem;
+                letter-spacing: 1.8px;
+                padding: 15px 10px 10px;
+            }
+
+            @include hover {
+                background: $color6;
+                opacity: 1;
+            }
+
+            span {
+                display: inline-block;
+                position: relative;
+                padding: 31px 0 0;
+                @include sp {
+                    padding: 20px 0 0;
+                }
+
+                &::before {
+                    content: "";
+                    width: 24px;
+                    height: 24px;
+                    background: url("../img/common/icon/icon-entry.svg") no-repeat center;
+                    background-size: cover;
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                    @include sp {
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    //------------------------------------------------------
+    &__action {
+        width: 120px;
+        display: flex;
+        flex-wrap: wrap;
+
+        // #{$root}__entry {
+        //     @include sp {
+        //         width: 60px;
+        //     }
+        // }
+    }
+
+    //------------------------------------------------------
+    &__hamburger {
+        background: $color1;
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 80;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &__icon {
+            span {
+                display: block;
+                background: $color4;
+                border-radius: 10px;
+                width: 16px;
+                height: 2px;
+                margin: 3px auto 0 0;
+                transition: all 0.3s ease-in-out;
+
+                &:nth-child(2) {
+                    width: 12px;
+                }
+
+                &:nth-child(3) {
+                    width: 8px;
+                }
+            }
+        }
+
+        &__txt {
+            display: block;
+            font-size: 1rem;
+            line-height: 1;
+            color: $color4;
+            font-weight: bold;
+            @include Roboto-Condensed();
+            letter-spacing: 2px;
+            margin: 10px 0 0;
+        }
+
+        &.close {
+            #{$root}__hamburger__icon {
+                span {
+                    width: 16px;
+                    &:first-child {
+                        transform: rotate(-45deg) translate(-4px, 4px);
+                    }
+
+                    &:nth-child(2) {
+                        opacity: 0;
+                    }
+
+                    &:last-child {
+                        transform: rotate(45deg) translate(-3px, -3px);
+                    }
+                }
+            }
+        }
+    }
+}

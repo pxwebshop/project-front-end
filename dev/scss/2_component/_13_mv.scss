@@ -1,0 +1,101 @@
+/*------------------------------------------------------------
+MV
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+.c-mv {
+    background: $color1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 23px 0 51px;
+    @include sp {
+        padding: 2px 0 98px;
+    }
+
+    //------------------------------------------------------
+    &__img {
+        width: calc(50% + 142px);
+        margin: 0 -142px 0 0;
+        position: relative;
+        z-index: 2;
+        @include max-w(1080px) {
+            width: calc(50% + 100px);
+            margin: 0 -100px 0 0;
+        }
+        @include sp {
+            width: 100%;
+            margin: 0;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    //------------------------------------------------------
+    &__info {
+        width: 50%;
+        margin: 81px 0 0;
+        @include sp {
+            width: 100%;
+            margin: 16px 0 0;
+            padding: 0 20px;
+        }
+    }
+
+    //------------------------------------------------------
+    &__box {
+        max-width: 82.5%;
+        margin: 0 auto;
+        @include sp {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+
+    //------------------------------------------------------
+    &__ttl {
+        font-size: calc((44 / 1280) * 100vw);
+        line-height: 1.62;
+        color: $color4;
+        font-weight: 900;
+        letter-spacing: 6px;
+        @include max-w(1080px) {
+            font-size: calc((34 / 1080) * 100vw);
+            letter-spacing: 3.6px;
+        }
+        @include sp {
+            text-align: center;
+            font-size: calc((30 / 375) * 100vw);
+            line-height: 1.5;
+            letter-spacing: 3px;
+        }
+        @include max-w(320px) {
+            font-size: 2.2rem;
+        }
+    }
+
+    //------------------------------------------------------
+    &__txt {
+        font-size: calc((16 / 1280) * 100vw);
+        line-height: 2.65;
+        color: $color4;
+        font-weight: 900;
+        margin: 20px 0 0;
+        @include max-w(1080px) {
+            font-size: calc((13 / 1080) * 100vw);
+        }
+        @include sp {
+            text-align: center;
+            font-size: calc((12 / 375) * 100vw);
+            line-height: 1.92;
+            letter-spacing: 0.6px;
+            margin: 16px 0 0;
+        }
+        @include max-w(320px) {
+            font-size: 1rem;
+        }
+    }
+}

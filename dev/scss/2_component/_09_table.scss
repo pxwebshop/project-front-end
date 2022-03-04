@@ -1,0 +1,105 @@
+/*------------------------------------------------------------
+table
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+.c-table1 {
+    $root: &;
+    width: 100%;
+    box-sizing: border-box;
+    border-collapse: collapse;
+
+    tr {
+        border-top: 1px solid $color1;
+        padding: 15px 0 16px 0px;
+        @include sp() {
+            display: block;
+        }
+        &:last-child {
+            border-bottom: 1px solid $color1;
+            td {
+                padding-bottom: 31px;
+                @include sp() {
+                    padding-bottom: 0;
+                }
+            }
+        }
+
+        &.top {
+            vertical-align: top;
+            th {
+                padding-top: 34px;
+                @include sp() {
+                    padding-top: 0;
+                }
+            }
+        }
+    }
+
+    th,
+    td {
+        font-size: 1.8rem;
+        line-height: 2;
+        text-align: left;
+        @include sp() {
+            display: block;
+        }
+    }
+
+    th {
+        width: 213px;
+        font-weight: bold;
+        color: $color2;
+        padding-left: 38px;
+        @include sp() {
+            padding-left: 0;
+            font-size: 1.6rem;
+            margin-bottom: 13px;
+            width: 100%;
+            padding-top: 0px;
+        }
+    }
+    td {
+        width: calc(100% - 210px);
+        color: $color8;
+        padding: 36px;
+        @include sp() {
+            width: 100%;
+            padding: 0px;
+        }
+    }
+
+    &__item {
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 1.78;
+        @include sp() {
+            font-size: 1.6rem;
+            line-height: 1.9;
+            display: flex;
+        }
+
+        &:before {
+            content: "\2022";
+            color: $color1;
+            font-weight: bold;
+            display: inline-block;
+            width: 3px;
+            margin-right: 17px;
+            @include sp() {
+                margin-right: 11px;
+            }
+        }
+    }
+    &__txt {
+        font-size: 1.8rem;
+        line-height: 1.9;
+        font-weight: 400;
+        display: block;
+        @include sp() {
+            font-size: 1.6rem;
+            line-height: 1.94;
+        }
+    }
+}

@@ -1,0 +1,192 @@
+/*------------------------------------------------------------
+img
+------------------------------------------------------------*/
+
+.c-imgtext1 {
+    display: flex;
+    flex-wrap: wrap;
+    $root: &;
+
+    &__img {
+        padding-right: 30px;
+        width: 50%;
+        @include sp() {
+            width: 100%;
+            padding-right: 0;
+        }
+    }
+    &__info {
+        width: 50%;
+        padding-top: 24px;
+        @include sp() {
+            width: 100%;
+            padding-top: 20px;
+        }
+    }
+    &__txt {
+        font-size: 1.6rem;
+        line-height: 2.5;
+        font-weight: 400;
+        margin-top: 12px;
+        @include sp() {
+            font-size: 1.6rem;
+            line-height: 2;
+            margin-top: 11px;
+        }
+    }
+    &--reverse {
+        flex-direction: row-reverse;
+
+        #{$root}__img {
+            padding-right: 0px;
+            padding-left: 30px;
+            @include sp() {
+                padding-left: 0;
+            }
+        }
+        #{$root}__txt {
+            font-size: 1.8rem;
+            line-height: 2;
+            margin-top: 15px;
+            @include sp() {
+                font-size: 1.6rem;
+                margin-top: 10px;
+            }
+        }
+        #{$root}__info {
+            padding-top: 28px;
+            @include sp() {
+                padding-top: 20px;
+            }
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-imgtext2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    $root: &;
+
+    //------------------------------------------------------
+    &__info {
+        width: 50%;
+        @include sp {
+            width: 100%;
+        }
+    }
+
+    //------------------------------------------------------
+    &__txt {
+        font-size: 1.6rem;
+        line-height: 2.5;
+        color: $color2;
+        @include sp {
+            line-height: 2;
+        }
+
+        + #{$root}__txt {
+            margin: 24px 0 0;
+            @include sp {
+                margin: 21px 0 0;
+            }
+        }
+    }
+
+    //------------------------------------------------------
+    &__img {
+        width: 43%;
+        margin: 10px 0 0;
+        @include sp {
+            width: 89%;
+            order: -1;
+            margin: 0 auto 25px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-imgtext3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    $root: &;
+
+    + #{$root} {
+        margin: 72px 0 0;
+        @include sp {
+            margin: 35px 0 0;
+        }
+    }
+
+    //------------------------------------------------------
+    &__img {
+        width: 50%;
+        @include sp {
+            width: 100%;
+            order: -1;
+        }
+
+        &.small {
+            width: 35.6%;
+            @include sp {
+                width: 100%;
+            }
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    //------------------------------------------------------
+    &__info {
+        flex: 1;
+        margin: -1px 0 0 4.1%;
+        @include sp {
+            flex: none;
+            width: 100%;
+            margin: 20px 0 0;
+        }
+    }
+
+    //------------------------------------------------------
+    &__txt {
+        font-size: 1.6rem;
+        line-height: 2.5;
+        color: $color2;
+        margin: 32px 0 0;
+        @include sp {
+            line-height: 2;
+            margin: 16px 0 0;
+        }
+    }
+
+    .c-title3 {
+        &__txt {
+            padding: 0 0 23px;
+            @include sp {
+                padding: 0 0 16px;
+            }
+        }
+    }
+
+    //------------------------------------------------------
+    &--reverse {
+        flex-direction: row-reverse;
+
+        #{$root}__info {
+            margin: -1px 4.1% 0 0;
+            @include sp {
+                margin: 20px 0 0;
+            }
+        }
+    }
+}

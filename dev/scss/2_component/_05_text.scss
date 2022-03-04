@@ -1,0 +1,78 @@
+/*------------------------------------------------------------
+text
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+.c-text1 {
+    $root: &;
+    // ------------------------------------
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.44;
+    @include sp() {
+        line-height: 2;
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-text2 {
+    width: calc(var(--vw, 1vw) * 100);
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    $root: &;
+    @include sp {
+        top: 3px;
+    }
+
+    //------------------------------------------------------
+    &__inner {
+        max-width: 1210px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 15px;
+        @include sp {
+            max-width: calc(100% - 20px);
+            padding: 0;
+        }
+    }
+
+    //------------------------------------------------------
+    &__txt {
+        font-size: 16rem;
+        line-height: 1;
+        color: rgba($color: #00abd8, $alpha: 0.05);
+        font-weight: bold;
+        @include Roboto-Condensed;
+        letter-spacing: 16px;
+        @include max-w(1280px) {
+            font-size: calc((146 / 1180) * 100vw);
+        }
+        @include sp {
+            font-size: 5rem;
+            letter-spacing: 5px;
+        }
+    }
+
+    //------------------------------------------------------
+    &--right {
+        top: -8px;
+        @include sp {
+            top: 3px;
+        }
+
+        #{$root}__inner {
+            max-width: 1240px;
+            @include sp {
+                max-width: calc(100% - 10px);
+            }
+        }
+
+        #{$root}__txt {
+            text-align: right;
+        }
+    }
+}
